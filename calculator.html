@@ -8,50 +8,50 @@
 </head>
 <body>
    <div id="calculator">
-     <input type="text" id="display" readonly>
-     <div class="button-container">
-        <button class="button utility"  onclick="currentDisplay = ''; document.querySelector('#display').value = currentDisplay;">C</button>
-        <button class="button number" onclick="currentDisplay = currentDisplay + '1';
-        document.querySelector('#display').value = currentDisplay;">1</button>
+          <input type="text" id="display" disabled />
+          <div class="button-container">
+            <!-- Scientific Buttons -->
+            <button class="button scientific" onclick="addExponent()">xʸ</button>
+            <button class="button scientific" onclick="applySquareRoot()">&radic;</button>
+            <button class="button scientific" onclick="insertValue('Math.PI')">π</button>
+            <button class="button scientific" onclick="insertValue('Math.E')">e</button>
+      
+            <!-- Utility Buttons -->
+            <button class="button utility" onclick="clearDisplay()">C</button>
+            <button class="button utility" onclick="applyModulus()">%</button>
+            <button class="button utility" onclick="deleteLast()">&#x232b;</button>
+            <button class="button operator" onclick="appendOperator('/')">&divide;</button>
+      
+            <!-- Number Buttons -->
+            <button class="button number" onclick="appendNumber('1')">1</button>
+            <button class="button number" onclick="appendNumber('2')">2</button>
+            <button class="button number" onclick="appendNumber('3')">3</button>
+            <button class="button operator" onclick="appendOperator('+')">+</button>
+      
+            <button class="button number" onclick="appendNumber('4')">4</button>
+            <button class="button number" onclick="appendNumber('5')">5</button>
+            <button class="button number" onclick="appendNumber('6')">6</button>
+            <button class="button operator" onclick="appendOperator('-')">-</button>
+      
+            <button class="button number" onclick="appendNumber('7')">7</button>
+            <button class="button number" onclick="appendNumber('8')">8</button>
+            <button class="button number" onclick="appendNumber('9')">9</button>
+            <button class="button operator" onclick="appendOperator('*')">&times;</button>
+      
+            <button class="button number" onclick="appendNumber('00')">00</button>
+            <button class="button number" onclick="appendNumber('0')">0</button>
+            <button class="button utility" onclick="appendDecimal()">.</button>
+            <button style="background-color: #ff9800;
+             " class="button utility equals" onclick="calculateResult()">=</button>
 
-        <button class="button number" onclick="currentDisplay = currentDisplay + '2';
-        document.querySelector('#display').value = currentDisplay;">2</button>
+    <button class="button scientific" onclick="window.location.href='age.html';">Age</button>
+    <button class="button scientific" onclick="window.location.href='temp.html';">Temp</button>
+    <button class="button scientific" onclick="window.location.href='loan.html';">Loan</button>
+    <button class="button scientific" onclick="window.location.href='cgpa.html';">Cgpa</button>
+      
 
-        <button class="button operator"
-        onclick="currentDisplay = currentDisplay + '+';
-        document.querySelector('#display').value = currentDisplay;">+</button>
-        <button class="button number" onclick="currentDisplay = currentDisplay + '3';
-        document.querySelector('#display').value = currentDisplay;">3</button>
-        <button class="button number"onclick="currentDisplay = currentDisplay + '4';
-        document.querySelector('#display').value = currentDisplay;">4</button>
+    <audio id="popSound" src="mixkit-select-click-1109.wav"></audio>
 
-        <button class="button operator" onclick="currentDisplay = currentDisplay + '-';
-        document.querySelector('#display').value = currentDisplay;">-</button>
-        <button class="button number"
-        onclick="currentDisplay = currentDisplay + '5';
-        document.querySelector('#display').value = currentDisplay;">5</button>
-        <button class="button number" onclick="currentDisplay = currentDisplay + '6';
-        document.querySelector('#display').value = currentDisplay;">6</button>
-        <button class="button operator" onclick="currentDisplay = currentDisplay + '*';
-        document.querySelector('#display').value = currentDisplay;">*</button>
-        <button class="button number" onclick="currentDisplay = currentDisplay + '7';
-        document.querySelector('#display').value = currentDisplay;">7</button>
-        <button class="button number" onclick="currentDisplay = currentDisplay + '8';
-        document.querySelector('#display').value = currentDisplay;">8</button>
-        <button class="button operator"onclick="currentDisplay = currentDisplay + '/';
-        document.querySelector('#display').value = currentDisplay;" >/</button>
-
-        
-
-        <button class="button number" onclick="currentDisplay = currentDisplay + '9';
-        document.querySelector('#display').value = currentDisplay;">9</button>
-        <button class="button number" onclick="currentDisplay = currentDisplay + '0';
-        document.querySelector('#display').value = currentDisplay;">0</button>
-        <button class="button utility"onclick="
-        currentDisplay = eval(currentDisplay);
-       document.querySelector('#display').value = currentDisplay;">=</button>
-        <button class="button utility" onclick="currentDisplay = currentDisplay + '.';
-        document.querySelector('#display').value = currentDisplay;">.</button>
     </div>
    </div>
 
